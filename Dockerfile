@@ -2,6 +2,11 @@ FROM bitwalker/alpine-elixir-phoenix
 
 MAINTAINER Little Kidogo <greetings@littlekidogo.co.za>
 
+## Add lib compat and bas for semantic release
+RUN apk add libc6-compat
+
+RUn apk add build-base
+
 ## Add SSH for deploying to vps 
 RUN apk add --no-cache openssh
 
